@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px gray;
+        }
+
+        .navbar h2 {
+            color: #00bcd4;
+            margin: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+
+        .navbar a.join {
+            background: teal; 
+            color: white; 
+            padding: 6px 12px; 
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 40px;
+            flex-wrap: wrap;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .top, .bottom {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .top img {
+            width: 650px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 8px gray;
+        }
+
+        .course {
+            background: white;
+            width: 310px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px gray;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .course img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .course h3 {
+            margin: 10px 0 5px;
+        }
+
+        .course p {
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        .right {
+            width: 280px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 8px gray;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .right img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .arrow {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 35px;  
+            color: teal;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>Techycorp Solutions</h2>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Pages</a>
+            <a href="#">Contact</a>
+            <a href="#" class="join">Join Now</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <div class="top">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="AI Course">
+            </div>
+
+            <div class="bottom">
+                <div class="course">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Java">
+                    <h3>Java Full Stack</h3>
+                    <p>360 Hrs</p>
+                </div>
+                <div class="course">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Data Analytics">
+                    <h3>Data Analytics</h3>
+                    <p>380 Hrs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980" alt="Cloud">
+            <h3>Cloud Architect</h3>
+            <p>260 Hrs</p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
