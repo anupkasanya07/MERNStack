@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Calculator</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 40px;
+        }
+
+        #screen {
+            width: 200px;
+            height: 35px;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        button {
+            width: 50px;
+            height: 40px;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .num { background-color: lightblue; }
+        .op  { background-color: orange; }
+        .eq  { background-color: lightgreen; }
+        .clr { background-color: red; color: white; }
+    </style>
+</head>
+
+<body>
+
+<h2>Simple Calculator</h2>
+
+<input type="text" id="screen" readonly><br>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <td><button class="num" onclick="press('1')">1</button></td>
+        <td><button class="num" onclick="press('2')">2</button></td>
+        <td><button class="num" onclick="press('3')">3</button></td>
+        <td><button class="op" onclick="press('+')">+</button></td>
+    </tr>
+
+    <tr>
+        <td><button class="num" onclick="press('4')">4</button></td>
+        <td><button class="num" onclick="press('5')">5</button></td>
+        <td><button class="num" onclick="press('6')">6</button></td>
+        <td><button class="op" onclick="press('-')">-</button></td>
+    </tr>
+
+    <tr>
+        <td><button class="num" onclick="press('7')">7</button></td>
+        <td><button class="num" onclick="press('8')">8</button></td>
+        <td><button class="num" onclick="press('9')">9</button></td>
+        <td><button class="op" onclick="press('*')">*</button></td>
+    </tr>
+
+    <tr>
+        <td><button class="clr" onclick="clearScreen()">C</button></td>
+        <td><button class="num" onclick="press('0')">0</button></td>
+        <td><button class="eq" onclick="calculate()">=</button></td>
+        <td><button class="op" onclick="press('/')">/</button></td>
+    </tr>
+</table>
+
+<script>
+function press(val) {
+    document.getElementById("screen").value += val;
+}
+
+function calculate() {
+    try {
+        let exp = document.getElementById("screen").value;
+        document.getElementById("screen").value = eval(exp);
+    } catch {
+        document.getElementById("screen").value = "Error";
+    }
+}
+
+function clearScreen() {
+    document.getElementById("screen").value = "";
+}
+</script>
+
+</body>
+</html>
